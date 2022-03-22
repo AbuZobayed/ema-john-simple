@@ -6,6 +6,7 @@ import './Product.css'
 const Product = (props) => {
     const {product,handleAddToCard} = props;
     const {name , img , seller , price , ratings} = product;
+    console.log(props);
 
     
     return (
@@ -16,14 +17,14 @@ const Product = (props) => {
             <p className='product-name'>{name}</p>
             <p>Price: ${price}</p>
 
-            <p><small>Seller:{seller}</small></p>
+            <p><small>Seller: {seller}</small></p>
             
             <p><small>Ratings:{ratings} stars</small></p>
             </div>
             <button 
             onClick={() => handleAddToCard(product)}
              className='btn-card'>
-                <p>Add Card</p>
+                <p>Add to Card</p>
                 <FontAwesomeIcon icon={faCoffee}></FontAwesomeIcon>
             </button>
         </div>
